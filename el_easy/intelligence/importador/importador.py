@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import sys
 import os
 from sqlite3 import dbapi2 as sqlite
 from collections import deque

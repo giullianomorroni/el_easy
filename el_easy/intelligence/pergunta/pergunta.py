@@ -4,7 +4,7 @@ Created on 14/08/2012
 @author: giulliano
 '''
 
-from base_dados.consulta import consulta
+from el_easy.intelligence.base_dados.consulta import consulta
 from collections import Counter
 
 class pergunta(object):

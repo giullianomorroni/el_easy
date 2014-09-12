@@ -4,7 +4,7 @@ Created on 08/08/2012
 @author: giulliano
 '''
 
-from base_dados.consulta import consulta
+from el_easy.intelligence.base_dados.consulta import consulta
 from collections import Counter
 import sys
 

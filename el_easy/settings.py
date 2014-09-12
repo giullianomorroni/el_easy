@@ -10,6 +10,10 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+#import sys
+
+#PROJECT_ROOT = os.path.dirname(__file__)
+#sys.path.insert(0, os.path.join(PROJECT_ROOT, "intelligence"))
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -30,6 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'el_easy',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,6 +51,10 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+)
+
+TEMPLATE_DIRS = (
+    os.path.join(os.path.dirname(__file__),'templates'),
 )
 
 ROOT_URLCONF = 'el_easy.urls'
@@ -76,6 +85,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    '/opt/development/workspace/pydev/el_easy/el_easy/templates/static',
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
