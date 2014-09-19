@@ -12,6 +12,6 @@ make install
 Importar dados
 
 from importador import importador
-i = importador()
-i.criar_tabela()
-i.popular_base()
+importador().apagar_tabela()
+importador().popular_base()
+importador().criar_tabela()

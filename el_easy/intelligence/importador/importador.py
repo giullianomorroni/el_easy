@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
+import logging
 from sqlite3 import dbapi2 as sqlite
 from collections import deque
 from bs4 import BeautifulSoup
@@ -31,20 +32,18 @@ class importador:
                          ' bola_14, bola_15, ganhadores_15, ganhadores_14, ganhadores_13, ganhadores_12, ganhadores_11)')
 
     def popular_base(self):
+        logging.warning('populando tabela loto')
         soup = BeautifulSoup(open("D_LOTFAC.HTM"))
         table = soup.table;
         trs = table.find_all('tr')
         r = []
-
         #nao esta funcionando
-        
+
         for tr in trs:
             tds = tr.find_all('td')
             for td in tds:
-                print(td.contents[0])
                 r.append(td.contents[0])
 
-            print(r)
             concurso = r[0]
             data = r[1]
             dia = data.split('/')[0]
@@ -78,4 +77,4 @@ class importador:
             int(ganhadores_12),
             int(ganhadores_11)))
             r = []
-
+            self.con.commit()

@@ -17,7 +17,7 @@ $("#estouComSorteLink").click(function(event){
 function showLuckNumbers(data) {
     $("#luckNumbers").empty();
     $("#luckPercent").empty();
-    
+
     mg = data['magic_numbers'];
     numbers = '';
     for (m in mg){

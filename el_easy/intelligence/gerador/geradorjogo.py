@@ -5,6 +5,7 @@ Created on 11/08/2012
 '''
 
 from random import uniform
+import random
 from collections import deque
 
 class GeradorJogo(object):
@@ -39,7 +40,9 @@ class GeradorJogo(object):
 
     def randomico_com_melhores_repeticoes(self, pergunta, repeticoes=7):
         jogo = deque()
-        bolas = pergunta.repeticao_numeros(repeticoes);
+        mes = random.randint(1, 12)
+        ano = random.randint(2003, 2014)
+        bolas = pergunta.repeticao_numeros(repeticoes, mes, ano);
         for melhores in bolas:
             jogo.append(melhores)
         return jogo;
