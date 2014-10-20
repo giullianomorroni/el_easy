@@ -2,6 +2,10 @@
 import os
 import sys
 
+#desenvolvimento apenas
+sys.path.append('/var/www/el_easy/el_easy')
+sys.path.append('/var/www/el_easy/')
+
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "el_easy.settings")
 
