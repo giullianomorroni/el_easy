@@ -88,6 +88,7 @@ USE_TZ = True
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
     '/opt/development/workspace/pydev/el_easy/el_easy/templates/static',
+    '/var/www/el_easy/el_easy/templates/static',
 )
 
 # Static files (CSS, JavaScript, Images)
