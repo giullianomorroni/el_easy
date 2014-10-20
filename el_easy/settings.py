@@ -89,9 +89,9 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    ('css', os.environ['EL-EASY']+'/el_easy/templates/static/css/'),
-    ('js', os.environ['EL-EASY']+'/el_easy/templates/static/js/'),
-    ('image', os.environ['EL-EASY_IMG']),
+    ('css', os.environ['EL_EASY']+'/el_easy/templates/static/css/'),
+    ('js', os.environ['EL_EASY']+'/el_easy/templates/static/js/'),
+    ('image', os.environ['EL_EASY_IMG']),
 )
 
 # Static files (CSS, JavaScript, Images)
