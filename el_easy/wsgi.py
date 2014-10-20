@@ -1,14 +1,14 @@
-"""
-WSGI config for el_easy project.
-
-It exposes the WSGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.7/howto/deployment/wsgi/
-"""
-
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "el_easy.settings")
+import sys
+import django.core.handlers.wsgi
 
-from django.core.wsgi import get_wsgi_application
-application = get_wsgi_application()
+#path = '/var/www/casacomigo/new_commerce/new_commerce/'
+#if path not in sys.path:
+sys.path.append('/var/www/el_easy/el_easy')
+sys.path.append('/var/www/el_easy/')
+
+os.environ['DJANGO_SETTINGS_MODULE'] 	= 'settings'
+os.environ["CASA_COMIGO"] 		= "/var/www/el_easy/el_easy"
+os.environ["CASA_COMIGO_IMG"] 		= "/var/www/static/el_easy"
+
+application = django.core.handlers.wsgi.WSGIHandler()
