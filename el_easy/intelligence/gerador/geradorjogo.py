@@ -4,7 +4,6 @@ Created on 11/08/2012
 @author: giulliano
 '''
 
-from random import uniform
 import random
 from collections import deque
 
@@ -16,15 +15,15 @@ class GeradorJogo(object):
     def randomico(self):
         jogo = deque()
         while len(jogo) != 5: 
-            bola = int(uniform(1,15))
+            bola = random.randint(1,15)
             if bola not in jogo:
                 jogo.append(bola)
         while len(jogo) != 10: 
-            bola = int(uniform(10,20))
+            bola = random.randint(10,20)
             if bola not in jogo:
                 jogo.append(bola)
         while len(jogo) != 15: 
-            bola = int(uniform(15,25))
+            bola = random.randint(10,25)
             if bola not in jogo:
                 jogo.append(bola)        
         return sorted(list(jogo));
@@ -40,7 +39,7 @@ class GeradorJogo(object):
             return novo_jogo
 
         while len(jogo) < 15:
-            bola = int(uniform(1,25))
+            bola = random.randint(1,25)
             if bola not in jogo:
                 jogo.append(bola)
 
@@ -66,8 +65,8 @@ class GeradorJogo(object):
         p = 0
         while (p < percentual):
             jogo = deque()
-            x = int(uniform(1,5))
-            ca = int(uniform(1,5))
+            x = random.randint(1,5)
+            ca = random.randint(1,5)
             jogo1 = self.randomico_com_melhores_repeticoes(pergunta, x)
             jogo2 = self.randomico_com_melhores_colunas(pergunta, ca)
 
