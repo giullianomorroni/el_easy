@@ -15,10 +15,18 @@ class GeradorJogo(object):
 
     def randomico(self):
         jogo = deque()
-        while len(jogo) != 15: 
-            bola = int(uniform(1,25))
+        while len(jogo) != 5: 
+            bola = int(uniform(1,15))
             if bola not in jogo:
                 jogo.append(bola)
+        while len(jogo) != 5: 
+            bola = int(uniform(10,20))
+            if bola not in jogo:
+                jogo.append(bola)
+        while len(jogo) != 5: 
+            bola = int(uniform(15,25))
+            if bola not in jogo:
+                jogo.append(bola)        
         return sorted(list(jogo));
 
     def completar_jogo(self, jogo):
