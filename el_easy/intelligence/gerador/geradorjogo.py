@@ -19,11 +19,11 @@ class GeradorJogo(object):
             bola = int(uniform(1,15))
             if bola not in jogo:
                 jogo.append(bola)
-        while len(jogo) != 5: 
+        while len(jogo) != 10: 
             bola = int(uniform(10,20))
             if bola not in jogo:
                 jogo.append(bola)
-        while len(jogo) != 5: 
+        while len(jogo) != 15: 
             bola = int(uniform(15,25))
             if bola not in jogo:
                 jogo.append(bola)        
