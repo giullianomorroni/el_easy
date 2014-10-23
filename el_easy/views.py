@@ -12,6 +12,7 @@ import random
 from intelligence.gerador.geradorjogo import GeradorJogo 
 from intelligence.analise.analisador import analisador 
 from intelligence.pergunta.pergunta import pergunta
+from django.views.decorators.cache import never_cache
 
 # import the logging library
 import logging
@@ -22,6 +23,8 @@ def home(request):
     logger.info('teste log');
     return render_to_response('home.html', context_instance=RequestContext(request));
 
+
+@never_cache
 def estoucomsorte(request):
     g = GeradorJogo()
     a = analisador()
@@ -32,6 +35,7 @@ def estoucomsorte(request):
     response_data['percent'] = analise
     return HttpResponse(json.dumps(response_data), content_type='application/json')
 
+@never_cache
 def melhores_repeticoes(request):
     g = GeradorJogo()
     a = analisador()
@@ -47,6 +51,7 @@ def melhores_repeticoes(request):
     response_data['percent'] = analise
     return HttpResponse(json.dumps(response_data), content_type='application/json')
 
+@never_cache
 def melhores_colunas(request):
     g = GeradorJogo()
     a = analisador()
@@ -59,14 +64,17 @@ def melhores_colunas(request):
     response_data['percent'] = analise
     return HttpResponse(json.dumps(response_data), content_type='application/json')
 
+@never_cache
 def percentual(request):
     response_data = {}
     return HttpResponse(json.dumps(response_data), content_type='application/json')
     
+@never_cache
 def complete(request):
     response_data = {}
     return HttpResponse(json.dumps(response_data), content_type='application/json')
-    
+
+@never_cache    
 def randomico(request):
     return estoucomsorte(request)
 
