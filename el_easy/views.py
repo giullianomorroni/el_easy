@@ -97,7 +97,7 @@ def analise_completa(request):
     jogo.append(request.POST["nmr14"])                                            
     jogo.append(request.POST["nmr15"])
     logger.info('Solicitada Analise Completa: ' + str(jogo));
-    return a.analise_completa(jogo)
+    return render_to_response("home.html", {"resultado_analise":a.analise_completa(jogo)})
 
 @never_cache    
 def analise_por_tempo(request):
@@ -119,7 +119,7 @@ def analise_por_tempo(request):
     jogo.append(request.POST["nmr14"])                                            
     jogo.append(request.POST["nmr15"])
     logger.info('Solicitada Analise Por Tempo: ' + str(jogo));
-    return a.analise_por_tempo(jogo, 2014)
+    return render_to_response("home.html", {"resultado_analise":a.analise_por_tempo(jogo, 2014)})
 
     
 def _500(request):
