@@ -1,6 +1,30 @@
 var HOST = location.host;
 var PROTOCOL = location.protocol;
 
+$(document).ready(function() { 
+    $('#myCarousel').carousel({
+        interval: 5000
+    });
+
+     $('#analiseCompletaForm').ajaxForm({
+        success: function() { 
+            $('#resultado_analise').html(data['resultado_analise']);
+            $('html, body').animate({
+                scrollTop: $("#resultado_analise").offset().top
+            }, 2000);
+        } 
+    });
+
+    $('#analisePorTempoForm').ajaxForm({
+        success: function(data) {
+            $('#resultado_analise').html(data['resultado_analise']);
+            $('html, body').animate({
+                scrollTop: $("#resultado_analise").offset().top
+            }, 2000);
+        } 
+    });  
+});
+
 $("#estouComSorteLink").click(function(event){
 	$.ajax({
 		url: _url('estoucomsorte'),

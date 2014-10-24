@@ -6,6 +6,7 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from collections import deque
 import json
 import random
@@ -77,6 +78,7 @@ def complete(request):
 def randomico(request):
     return estoucomsorte(request)
 
+@csrf_exempt
 @never_cache    
 def analise_completa(request):
     a = analisador()
@@ -97,8 +99,9 @@ def analise_completa(request):
     jogo.append(request.POST["nmr14"])                                            
     jogo.append(request.POST["nmr15"])
     logger.info('Solicitada Analise Completa: ' + str(jogo));
-    return render_to_response("home.html", {"resultado_analise":a.analise_completa(jogo)})
+    return HttpResponse(json.dumps({"resultado_analise":a.analise_completa(jogo)}), content_type='application/json')
 
+@csrf_exempt
 @never_cache    
 def analise_por_tempo(request):
     a = analisador()
@@ -119,8 +122,7 @@ def analise_por_tempo(request):
     jogo.append(request.POST["nmr14"])                                            
     jogo.append(request.POST["nmr15"])
     logger.info('Solicitada Analise Por Tempo: ' + str(jogo));
-    return render_to_response("home.html", {"resultado_analise":a.analise_por_tempo(jogo, 2014)})
-
+    return HttpResponse(json.dumps({"resultado_analise":a.analise_por_tempo(jogo, 2014)}), content_type='application/json')
     
 def _500(request):
     return render_to_response('500.html');
