@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>LEasy</title>
+    <title>Loto Fácil - LEasy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="site com dados sobre a loto fácil">
+    <meta name="description" content="dados sobre loto fácil">
+    <meta name="keywords" content="loto facil, numeros loto facil, gerador de jogo, eleasy, jogo loto facil">
     <meta name="author" content="Giulliano Morroni">
 	<link id="callCss" rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css" media="screen" charset="utf-8" />
 
@@ -21,9 +22,9 @@
             <a href="#">
             <img src="/static/img/logo1.png" alt="" /></a>
         </div>
-    
+
         <div class="navbar">
-            <div class="nav-collapse">
+            <div class="nav-collapse in collapse" style="height: auto;">
                 <ul class="nav">
                     <li><a href="#ourServices" id="estouComSorteLink">Estou com sorte</a></li>
                     <li><a href="#portfolioSection">O Melhor Jogo</a></li>
@@ -32,17 +33,9 @@
                     <li><a href="#meetourteamSection">Desenvolvedores</a></li>
                 </ul>
             </div>
-        
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
         </div>
     </div>
 </div>
-
-    
 
 <div id="carouselSection" class="cntr"> 
         <div id="myCarousel" class="carousel slide">
@@ -59,8 +52,6 @@
             <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
         </div>
 </div>
-
-
 
 <!-- Estou com sorte ======================================== -->
 <div id="ourServices">  
@@ -90,44 +81,44 @@
 <!-- O Melhor Jogo======================================== -->
 <div id="portfolioSection">
     <div class="span6" style="width:100%">
-        <h1 class="cntr">O Melhor Jogo</h1>
-        <p style="font-size: xx-large; margin-bottom: 20px;">Como prefere seu jogo? Aqui é a pastelaria do bons números, é só pedir. </p>
+        <h1 class="cntr">Melhores Números</h1>
+        <p style="font-size: xx-large; margin-bottom: 20px;">Como prefere seu jogo? escolha a opção que melhor te atende. BOA SORTE! </p>
     </div>
     <div class="container"> 
         <div class="clr"></div>
         <div class="tabbable tabs">
             <div class="tab-content label-primary">
                 <div class="tab-pane active" id="all">
-                    <ul class="thumbnails">
-                        <li class="span4">
+                    <ul style="list-style: none;">
+                        <li class="span4" style="margin-bottom: 20px;">
                             <div>
                                 <button type="button" class="btn btn-default btn-lg" onclick="order('melhores_repeticoes');">
                                 <h3> melhores repetições </h3>
                                 </button>
                             </div>
                         </li>
-                        <li class="span4">
+                        <li class="span4" style="margin-bottom: 20px;">
                             <div>
 								<button type="button" class="btn btn-default btn-lg" onclick="order('melhores_colunas');" >
                                 <h3>melhores colunas</h3>
 								</button>
                             </div>
                         </li>
-                        <li class="span4">
+                        <li class="span4" style="margin-bottom: 20px;">
                             <div>
 								<button type="button" class="btn btn-default btn-lg" onclick="order('percentual');" >
                                 <h3>percentual de acerto</h3>
 								</button>
                             </div>
                         </li>
-                        <li class="span4">
+                        <li class="span4" style="margin-bottom: 20px;">
                             <div>
 								<button type="button" class="btn btn-default btn-lg" onclick="order('complete');" >
                                 <h3>complete meu jogo</h3>
 								</button>
                             </div>
                         </li>
-                        <li class="span4">
+                        <li class="span4" style="margin-bottom: 20px;">
                             <div>
 								<button type="button" class="btn btn-default btn-lg" onclick="order('randomico');" >
                                 <h3>números aletórios</h3>
@@ -160,17 +151,17 @@
                     E de quanto aproximadamente foi seu lucro, ou então se você não teve lucro algum.
                     </p>
                     <h4>se você ganhou: </h4>
-                    <a href="#" class="btn btn-large btn-success">até 5,00</a>
-                    <a href="#" class="btn btn-large btn-success">até 15,00</a>
-                    <a href="#" class="btn btn-large btn-success">até 50,00</a>
-                    <a href="#" class="btn btn-large btn-success">até 1.000,00</a>
-                    <a href="#" class="btn btn-large btn-success">mais 1.000,00</a>
+                    <a href="#" class="btn btn-large btn-success" style="margin:5px;">até 5,00</a>
+                    <a href="#" class="btn btn-large btn-success" style="margin:5px;">até 15,00</a>
+                    <a href="#" class="btn btn-large btn-success" style="margin:5px;">até 50,00</a>
+                    <a href="#" class="btn btn-large btn-success" style="margin:5px;">até 1.000,00</a>
+                    <a href="#" class="btn btn-large btn-success" style="margin:5px;">mais 1.000,00</a>
                 </div>
 
                 <div class="inner">
                     <h4>se você não ganhou: </h4>
-                    <a href="#" class="btn btn-large btn-danger">nunca ganhei</a>
-                    <a href="#" class="btn btn-large btn-danger">dessa vez não deu</a>
+                    <a href="#" class="btn btn-large btn-danger" style="margin:5px;">nunca ganhei</a>
+                    <a href="#" class="btn btn-large btn-danger" style="margin:5px;">dessa vez não deu</a>
                 </div>
 
             </div>
@@ -179,22 +170,7 @@
                 <img src="/static/img/img-10.png" alt="" />
             </div>
         </div>
-        
         <hr class="soften clear"/>
-        
-        <div class="row span12">
-            <div class="span4">
-                <img src="/static/img/img-10.png" alt="" />
-            </div>
-            <div class="span8">
-                <div class="inner">
-                    <h1>Layered Neatly Photoshop Template</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. Mauris faucibus tellus ac auctor posuere. Integer lobortis purus a felis adipiscing, eget ornare justo semper. Etiam commodo tincidunt ante.</p>
-                    <a href="#" class="btn btn-large btn-primary">SHOW MORE</a>
-                </div>
-            </div>    
-        </div>
-    </div>
 </div>
 
 
@@ -215,57 +191,83 @@
         <div class="tabbable tabs">
             <div class="tab-content label-primary">
                 <div class="tab-pane active" id="all">
-                    <ul class="thumbnails">
-                        
+                    <ul style="list-style: none;"> 
                         <li class="span4">
-                            <div class="thumbnail">
-                                <div class="blockDtl">
-                                <a href="#" ><img src="/static/img/img-12.png" alt=""></a>
-                                <h4>Análise Completa</h4>
-                                <h6>Base Completa</h6>
-                                <p>
-                                    Esta análise é feita usando todos os resultados já sorteados pela loto fácil, e comparando eles
-                                    aos seus números. Individualmente todos os números foram sorteados uma quantidade de vezes muito próxima. 
-                                    Vamos quebrar seu jogo em partes e analisa-lo com nossos algoritmos.
-                                </p>
-                                
+                            <div>
+                                <div style="background-color: white">
+                                    <a href="#" ><img src="/static/img/img-12.png" alt=""></a>
+                                    <h4>Análise Completa</h4>
+                                    <h6>Base Completa</h6>
+                                    <p style="color: black;">
+                                        Esta análise é feita usando todos os resultados já sorteados pela loto fácil, e comparando eles
+                                        aos seus números. Individualmente todos os números foram sorteados uma quantidade de vezes muito próxima. 
+                                        Vamos quebrar seu jogo em partes e analisa-lo com nossos algoritmos.
+                                    </p>
+                                    <form class="form" role="form" action="/analisar" method="post">
+                                        Digite seu jogo!
+                                        <div class="form-group">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*"> 
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*"> 
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <br/>
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">                                            
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">                                            
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <br/>
+                                            <button type="submit" style="width: 150px; height: 30px; margin-bottom: 20px;" class="btn btn-success">ANALISAR</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </li>
                         <li class="span4">
-                            <div class="thumbnail">
-                                <div class="blockDtl">
+                            <div>
+                                <div style="background-color: white">
                                     <a href="#"><img src="/static/img/img-12.png" alt=""></a>
                                     <h4>Análise por Tempo</h4>
                                     <h6>Defina o período</h6>
-                                    <p>
+                                    <p style="color: black;">
                                         Esta análise é idêntica à análise completa porém permite especificar
                                         um período, ao invés de utilizar toda a base de dados. Isso permite que seu jogo 
                                         seja avaliado, por exemplo, somente com o mês atual ou com um ano específico.
                                     </p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="span4">
-                            <div class="thumbnail">
-                                <div class="blockDtl">
-                                <a href="#"><img src="/static/img/img-12.png" alt=""></a>
-                                <h4>Really Interesting Post</h4>
-                                <h6>October 27</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et quam est. </p>
-                               
+                                    <form class="form" role="form" action="/analisar" method="post">
+                                        Digite seu jogo!
+                                        <div class="form-group">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*"> 
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*"> 
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <br/>
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">                                            
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">                                            
+                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <br/>
+                                            <button type="submit" style="width: 150px; height: 30px; margin-bottom: 20px;" class="btn btn-success">ANALISAR</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </li>
                     </ul>
-                    <form class="form-horizontal" role="form" action="/analisar" method="post">
-                        <div class="form-group">
-                            <input type="text" class="form-control" pattern="[1-9]*" id="mynumbers" placeholder="Digite aqui seu jogo">
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-large btn-primary disabled">ANALISAR</button>
-                        </div>    
-                    </form>
+
                 </div>
             </div>
         </div>
@@ -283,18 +285,18 @@
         <p>O site pertence a nós, o conteúdo é para todos. E não se esqueça, se ganhar, e você vai ganhar, a gente aceita um agrado </p>
      </div>
      
-     <div class="container"  style="width:100%;"> 
+     <div class="container">
         <div class="tabbable tabs">
             <div class="tab-content label-primary">
                 <div class="tab-pane active" id="all">
-                    <ul class="thumbnails" style="margin-left:300px !important;">
+                    <ul style="list-style: none;">
                         <li class="span4">
-                            <div class="thumbnail">
-                                <div class="blockDtl">
+                            <div>
+                                <div style="background: white;">
                                     <a href="#" ><img src="/static/img/img-11.png" alt=""></a>
                                     <h4>Giulliano Morroni</h4>
                                     <h5>Vai morrer pobre</h5>
-                                    <p>Escreveu algoritmos baseados em análises de dados para prever o seu futuro. </p>
+                                    <p style="color: black;">Escreveu algoritmos baseados em análises de dados para prever o seu futuro. </p>
                                     <a class="facebook" href="#"></a>
                                     <a class="twitter" href="#"></a>
                                     <a class="pin" href="#"></a>
@@ -302,28 +304,28 @@
                             </div>
                         </li>
                         <li class="span4">
-                            <div class="thumbnail">
-                                <div class="blockDtl">
-                                <a href="#"><img src="/static/img/img-11.png" alt=""></a>
-                                <h4>Pauline Santos</h4>
-                                <h5>Futura Milionária</h5>
-                                <p>Aposta nos resultados gerados e contribue para melhoria contínua do site. </p>
-                                <a class="facebook" href="#"></a>
-                                <a class="twitter" href="#"></a>
-                                <a class="pin" href="#"></a>
+                            <div>
+                                <div style="background: white;">
+                                    <a href="#"><img src="/static/img/img-11.png" alt=""></a>
+                                    <h4>Pauline Santos</h4>
+                                    <h5>Futura Milionária</h5>
+                                    <p style="color: black;">Aposta nos resultados gerados e contribue para melhoria contínua do site. </p>
+                                    <a class="facebook" href="#"></a>
+                                    <a class="twitter" href="#"></a>
+                                    <a class="pin" href="#"></a>
                                 </div>
                             </div>
                         </li>
                         <li class="span4">
-                            <div class="thumbnail">
-                                <div class="blockDtl">
-                                <a href="#"><img src="/static/img/img-11.png" alt=""></a>
-                                <h4>Macarrão com Salsicha</h4>
-                                <h5>Almoço</h5>
-                                <p>Contribue com a soma de calorias e saciedade do time. </p>
-                                <a class="facebook" href="#"></a>
-                                <a class="twitter" href="#"></a>
-                                <a class="pin" href="#"></a>
+                            <div>
+                                <div style="background: white;">
+                                    <a href="#"><img src="/static/img/img-11.png" alt=""></a>
+                                    <h4>Macarrão + Salsicha</h4>
+                                    <h5>Almoço</h5>
+                                    <p style="color: black;">Contribue com a soma de calorias e saciedade do time. </p>
+                                    <a class="facebook" href="#"></a>
+                                    <a class="twitter" href="#"></a>
+                                    <a class="pin" href="#"></a>
                                 </div>
                             </div>
                         </li>
@@ -336,8 +338,6 @@
 
 
 
-
-
 <!-- Contact Section -->
 <div id="contactSection">
     <div class="footerSection container">
@@ -347,7 +347,7 @@
             <a class="html5" href="#"></a>
             <a class="icon2" href="#"></a>
         </div>
-        <div class="span8 copyright"><p>  Copyright 2014 | Developed By </a></p></div>
+        <div class="span8 copyright"><p>  Copyright 2014 | Developed By mcti </a></p></div>
     </div>
 </div> 
 
