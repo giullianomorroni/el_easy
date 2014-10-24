@@ -7,7 +7,7 @@ $(document).ready(function() {
     });
 
      $('#analiseCompletaForm').ajaxForm({
-        success: function() { 
+        success: function(data) { 
             $('#resultado_analise').html(data['resultado_analise']);
             $('html, body').animate({
                 scrollTop: $("#resultado_analise").offset().top
