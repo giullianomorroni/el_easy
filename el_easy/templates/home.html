@@ -203,25 +203,26 @@
                                         aos seus números. Individualmente todos os números foram sorteados uma quantidade de vezes muito próxima. 
                                         Vamos quebrar seu jogo em partes e analisa-lo com nossos algoritmos.
                                     </p>
-                                    <form class="form" role="form" action="/analisar" method="post">
+                                    <form class="form" role="form" action="/analisar/analise_completa/" method="post">
+                                        {% csrf_token %}
                                         Digite seu jogo!
                                         <div class="form-group">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*"> 
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*"> 
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" required name="nmr1" id="nmr1" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr2" id="nmr2" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr3" id="nmr3" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]"> 
+                                            <input type="tel" required name="nmr4" id="nmr4" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr5" id="nmr5" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr6" id="nmr6" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]"> 
+                                            <input type="tel" required name="nmr7" id="nmr7" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
                                             <br/>
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">                                            
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">                                            
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" required name="nmr8" id="nmr8" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr9" id="nmr9" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr10" id="nmr10" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr11" id="nmr11" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr12" id="nmr12" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">                                            
+                                            <input type="tel" required name="nmr13" id="nmr13" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr14" id="nmr14" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">                                            
+                                            <input type="tel" required name="nmr15" id="nmr15" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
                                             <br/>
                                             <button type="submit" style="width: 150px; height: 30px; margin-bottom: 20px;" class="btn btn-success">ANALISAR</button>
                                         </div>
@@ -240,25 +241,26 @@
                                         um período, ao invés de utilizar toda a base de dados. Isso permite que seu jogo 
                                         seja avaliado, por exemplo, somente com o mês atual ou com um ano específico.
                                     </p>
-                                    <form class="form" role="form" action="/analisar" method="post">
+                                    <form class="form" role="form" action="/analisar/analise_por_tempo/" method="post">
+                                        {% csrf_token %}
                                         Digite seu jogo!
                                         <div class="form-group">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*"> 
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*"> 
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" required name="nmr1" id="nmr1" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr2" id="nmr2" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr3" id="nmr3" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]"> 
+                                            <input type="tel" required name="nmr4" id="nmr4" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr5" id="nmr5" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr6" id="nmr6" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]"> 
+                                            <input type="tel" required name="nmr7" id="nmr7" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
                                             <br/>
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">                                            
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">                                            
-                                            <input type="tel" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[1-9]*">
+                                            <input type="tel" required name="nmr8" id="nmr8" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr9" id="nmr9" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr10" id="nmr10" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr11" id="nmr11" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr12" id="nmr12" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">                                            
+                                            <input type="tel" required name="nmr13" id="nmr13" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
+                                            <input type="tel" required name="nmr14" id="nmr14" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">                                            
+                                            <input type="tel" required name="nmr15" id="nmr15" class="form-control" style="margin-left: 5px; width: 20px; height: 30px;" pattern="[0-9]{0,1}?[0-9]">
                                             <br/>
                                             <button type="submit" style="width: 150px; height: 30px; margin-bottom: 20px;" class="btn btn-success">ANALISAR</button>
                                         </div>

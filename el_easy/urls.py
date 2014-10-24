@@ -9,7 +9,9 @@ urlpatterns = patterns('',
     url(r'^pastelaria/percentual/', 'el_easy.views.percentual', name='percentual'),
     url(r'^pastelaria/complete/', 'el_easy.views.complete', name='complete'),
     url(r'^pastelaria/randomico/', 'el_easy.views.randomico', name='randomico'),
-
+    url(r'^analisar/analise_por_tempo/', 'el_easy.views.analise_por_tempo', name='analise_por_tempo'),
+    url(r'^analisar/analise_completa/', 'el_easy.views.analise_completa', name='analise_completa'),
+    
     # url(r'^blog/', include('blog.urls')),
     #url(r'^admin/', include(admin.site.urls)),
 )

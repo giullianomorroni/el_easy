@@ -20,7 +20,6 @@ import logging
 logger = logging.getLogger('el-easy')
 
 def home(request):
-    logger.info('teste log');
     return render_to_response('home.html', context_instance=RequestContext(request));
 
 
@@ -78,6 +77,51 @@ def complete(request):
 def randomico(request):
     return estoucomsorte(request)
 
+@never_cache    
+def analise_completa(request):
+    a = analisador()
+    jogo = deque();
+    jogo.append(request.POST["nmr1"])
+    jogo.append(request.POST["nmr2"])
+    jogo.append(request.POST["nmr3"])
+    jogo.append(request.POST["nmr4"])
+    jogo.append(request.POST["nmr5"])
+    jogo.append(request.POST["nmr6"])
+    jogo.append(request.POST["nmr7"])
+    jogo.append(request.POST["nmr8"])
+    jogo.append(request.POST["nmr9"])
+    jogo.append(request.POST["nmr10"]) 
+    jogo.append(request.POST["nmr11"])
+    jogo.append(request.POST["nmr12"])                                            
+    jogo.append(request.POST["nmr13"])
+    jogo.append(request.POST["nmr14"])                                            
+    jogo.append(request.POST["nmr15"])
+    logger.info('Solicitada Analise Completa: ' + str(jogo));
+    return a.analise_completa(jogo)
+
+@never_cache    
+def analise_por_tempo(request):
+    a = analisador()
+    jogo = deque();
+    jogo.append(request.POST["nmr1"])
+    jogo.append(request.POST["nmr2"])
+    jogo.append(request.POST["nmr3"])
+    jogo.append(request.POST["nmr4"])
+    jogo.append(request.POST["nmr5"])
+    jogo.append(request.POST["nmr6"])
+    jogo.append(request.POST["nmr7"])
+    jogo.append(request.POST["nmr8"])
+    jogo.append(request.POST["nmr9"])
+    jogo.append(request.POST["nmr10"]) 
+    jogo.append(request.POST["nmr11"])
+    jogo.append(request.POST["nmr12"])                                            
+    jogo.append(request.POST["nmr13"])
+    jogo.append(request.POST["nmr14"])                                            
+    jogo.append(request.POST["nmr15"])
+    logger.info('Solicitada Analise Por Tempo: ' + str(jogo));
+    return a.analise_por_tempo(jogo, 2014)
+
+    
 def _500(request):
     return render_to_response('500.html');
 def _404(request):
